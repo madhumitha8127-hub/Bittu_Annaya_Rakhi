@@ -1,0 +1,1010 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+        radial-gradient(circle at top left, #ffe1eb, transparent 35%),
+        radial-gradient(circle at bottom right, #fff0d8, transparent 35%),
+        linear-gradient(135deg, #fff8fb, #ffeaf1);
+
+    color: #5a2939;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.rakhi-symbol {
+
+    font-size: 90px;
+
+    margin-bottom: 15px;
+
+    animation: float 3s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 10px 20px rgba(180, 60, 100, 0.2));
+}
+
+
+.small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #a4526c;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+.welcome h1 {
+
+    font-size: clamp(45px, 8vw, 78px);
+
+    line-height: 1.1;
+
+    color: #6d293d;
+
+    margin-bottom: 25px;
+}
+
+
+.welcome h1 span {
+
+    display: block;
+
+    color: #c64268;
+
+    margin-top: 10px;
+}
+
+
+.welcome-message {
+
+    max-width: 650px;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+.main-button,
+.rakhi-button {
+
+    border: none;
+
+    padding: 17px 35px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(135deg, #c64268, #e36183);
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(198, 66, 104, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+
+.main-button:hover,
+.rakhi-button:hover {
+
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 15px 30px rgba(198, 66, 104, 0.4);
+}
+
+
+.tiny-text {
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    color: #9d6576;
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.main-page {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 60px 20px;
+}
+
+
+.container {
+
+    max-width: 850px;
+
+    width: 100%;
+
+    margin: auto;
+}
+
+
+/* =========================
+   RAKHI CARD
+========================= */
+
+.rakhi-card {
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border-radius: 30px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 15px 45px rgba(120, 40, 70, 0.13);
+}
+
+
+.rakhi-animation {
+
+    width: 140px;
+
+    height: 140px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 75px;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 10px #ffe3ed,
+        0 0 0 20px #fff3f7,
+        0 15px 30px rgba(150, 50, 80, 0.15);
+
+    animation: float 3s ease-in-out infinite;
+
+    transition: 0.5s;
+}
+
+
+.rakhi-animation.tied {
+
+    animation:
+        rakhiTied 0.8s ease,
+        glow 2s infinite;
+}
+
+
+.rakhi-card h2 {
+
+    margin-top: 35px;
+
+    color: #c64268;
+
+    font-size: 32px;
+}
+
+
+.rakhi-card p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 600px;
+
+    margin: 15px auto 25px;
+}
+
+
+.rakhi-status {
+
+    color: #c64268 !important;
+
+    font-size: 15px !important;
+
+    margin-top: 18px !important;
+}
+
+
+/* =========================
+   MEMORY PHOTO
+========================= */
+
+.memory-card {
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    padding: 40px 25px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 15px 45px rgba(120, 40, 70, 0.12);
+}
+
+
+.section-label {
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #a4526c;
+
+    font-weight: bold;
+
+    margin-bottom: 25px !important;
+}
+
+
+.photo-frame {
+
+    width: min(360px, 90%);
+
+    margin: auto;
+
+    padding: 10px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(120, 40, 70, 0.2);
+
+    transform: rotate(-1deg);
+
+    transition: 0.4s;
+}
+
+
+.photo-frame:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.03);
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 18px;
+
+    max-height: 500px;
+
+    object-fit: cover;
+}
+
+
+.memory-card h2 {
+
+    color: #c64268;
+
+    font-size: 30px;
+
+    margin-top: 30px;
+
+    margin-bottom: 15px;
+}
+
+
+.memory-card p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 650px;
+
+    margin: 12px auto;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-card {
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.94),
+            rgba(255,248,244,0.95)
+        );
+
+    padding: 55px 45px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 15px 45px rgba(120, 40, 70, 0.13);
+}
+
+
+.flower {
+
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+
+.letter-card h2 {
+
+    color: #c64268;
+
+    font-size: 36px;
+
+    margin-bottom: 30px;
+}
+
+
+.letter-card p {
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+.letter-card h3 {
+
+    color: #c64268;
+
+    font-size: 27px;
+
+    line-height: 1.5;
+
+    margin-top: 35px;
+}
+
+
+.love-message {
+
+    color: #b5355c;
+
+    font-weight: bold;
+
+    font-size: 23px !important;
+}
+
+
+/* =========================
+   THINGS
+========================= */
+
+.things-card {
+
+    background:
+        rgba(255, 255, 255, 0.86);
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 15px 40px rgba(120, 40, 70, 0.12);
+}
+
+
+.things-card h2 {
+
+    color: #c64268;
+
+    font-size: 32px;
+
+    margin-bottom: 30px;
+}
+
+
+.things-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.thing {
+
+    background: #fff7fa;
+
+    padding: 25px 18px;
+
+    border-radius: 20px;
+
+    border: 1px solid #ffe0e9;
+
+    transition: 0.3s;
+}
+
+
+.thing:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(150, 50, 80, 0.12);
+}
+
+
+.thing span {
+
+    font-size: 32px;
+}
+
+
+.thing p {
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-top: 12px;
+}
+
+
+/* =========================
+   CONTINUE
+========================= */
+
+.continue-section {
+
+    text-align: center;
+
+    padding: 30px 20px 70px;
+}
+
+
+.continue-section p {
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    margin-bottom: 7px;
+}
+
+
+.continue-section button {
+
+    margin-top: 20px;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-section {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 70px 20px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.final-content {
+
+    width: 100%;
+
+    max-width: 850px;
+}
+
+
+.big-heart {
+
+    font-size: 115px;
+
+    margin-bottom: 15px;
+
+    animation: heartbeat 1.2s infinite;
+}
+
+
+.final-label {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #a4526c;
+
+    margin-bottom: 20px;
+}
+
+
+.final-content h1 {
+
+    color: #c64268;
+
+    font-size: clamp(38px, 7vw, 68px);
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+
+.final-content h1 span {
+
+    display: block;
+}
+
+
+.final-line {
+
+    font-size: 23px;
+
+    line-height: 1.7;
+}
+
+
+.distance-card {
+
+    max-width: 650px;
+
+    margin: 35px auto;
+
+    padding: 28px 20px;
+
+    background: rgba(255,255,255,0.9);
+
+    border-radius: 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    box-shadow:
+        0 15px 35px rgba(120, 40, 70, 0.13);
+}
+
+
+.distance-card div {
+
+    line-height: 1.6;
+
+    font-size: 17px;
+}
+
+
+.distance-card strong {
+
+    color: #c64268;
+
+    display: block;
+}
+
+
+.final-message {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background:
+        rgba(255,255,255,0.72);
+
+    padding: 35px 25px;
+
+    border-radius: 25px;
+}
+
+
+.final-message p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+.final-message h2 {
+
+    color: #c64268;
+
+    font-size: 29px;
+
+    margin-top: 25px;
+}
+
+
+.forever {
+
+    color: #b5355c;
+
+    font-weight: bold;
+
+    font-size: 21px !important;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-hearts span {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    opacity: 0.55;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation:
+        rise 9s linear infinite;
+}
+
+
+.floating-hearts span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 35%;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 65%;
+    animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 80%;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 94%;
+    animation-delay: 6s;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+@keyframes rise {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-115vh);
+        opacity: 0;
+    }
+}
+
+
+@keyframes rakhiTied {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25) rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes glow {
+
+    0%, 100% {
+        box-shadow:
+            0 0 0 10px #ffe3ed,
+            0 0 0 20px #fff3f7,
+            0 15px 30px rgba(150, 50, 80, 0.15);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px 10px #ffd1df,
+            0 0 40px 20px #fff0f5;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .welcome {
+
+        padding: 25px 18px;
+    }
+
+
+    .rakhi-symbol {
+
+        font-size: 70px;
+    }
+
+
+    .small-title {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .welcome h1 {
+
+        font-size: 43px;
+    }
+
+
+    .welcome-message {
+
+        font-size: 17px;
+    }
+
+
+    .main-page {
+
+        padding: 40px 14px;
+    }
+
+
+    .rakhi-card {
+
+        padding: 40px 18px;
+    }
+
+
+    .rakhi-animation {
+
+        width: 110px;
+
+        height: 110px;
+
+        font-size: 58px;
+    }
+
+
+    .rakhi-card h2 {
+
+        font-size: 27px;
+    }
+
+
+    .rakhi-card p {
+
+        font-size: 16px;
+    }
+
+
+    .memory-card {
+
+        padding: 30px 15px;
+    }
+
+
+    .memory-card h2 {
+
+        font-size: 26px;
+    }
+
+
+    .memory-card p {
+
+        font-size: 16px;
+    }
+
+
+    .letter-card {
+
+        padding: 40px 20px;
+    }
+
+
+    .letter-card h2 {
+
+        font-size: 29px;
+    }
+
+
+    .letter-card p {
+
+        font-size: 16px;
+    }
+
+
+    .things-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .things-card h2 {
+
+        font-size: 27px;
+    }
+
+
+    .distance-card {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .final-line {
+
+        font-size: 18px;
+    }
+
+
+    .final-message p {
+
+        font-size: 16px;
+    }
+
+
+    .big-heart {
+
+        font-size: 80px;
+    }
+
+}
